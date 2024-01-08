@@ -1,11 +1,11 @@
 document.addEventListener("click", (e) => {
   console.log(e);
-  if (e.target === arrowPrec) {
-    customer1.classList.toggle("unactive");
-    customer2.classList.toggle("unactive");
+  if (e.target === prev) {
+    customer1.classList.toggle("active");
+    customer2.classList.toggle("active");
   }
-  if (e.target === arrowNext) {
-    customer2.classList.toggle("unactive");
-    customer1.classList.toggle("unactive");
+  if (e.target === next) {
+    customer2.classList.toggle("active");
+    customer1.classList.toggle("active");
   }
 });
