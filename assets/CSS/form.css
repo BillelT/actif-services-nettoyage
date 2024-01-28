@@ -1,4 +1,5 @@
 /*color : blue #0180A8, red #E62701, white #fefffe, black #0D1321 */
+@import url("https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,200;0,300;0,500;0,600;1,200&display=swap");
 
 * {
   box-sizing: border-box;
@@ -10,9 +11,9 @@
 }
 
 html {
-  font-family: Montserrat;
+  font-family: "Montserrat", Arial, sans-serif;
   background: #fefffe;
-  color: #0d1321;
+  scroll-behavior: smooth;
 }
 h1 {
   font-size: 60px;
@@ -22,6 +23,11 @@ h1 {
 h2 {
   font-size: 45px;
   font-weight: 600;
+}
+
+h3 {
+  font-size: 30px;
+  font-weight: 500;
 }
 
 a {
@@ -47,12 +53,12 @@ p {
 }
 
 button {
-  font-family: Montserrat;
+  font-family: "Montserrat", Arial, sans-serif;
   border-radius: 18px;
   background: #0180a8;
   border: none;
   color: #fefffe;
-  font-weight: 300;
+  font-weight: 500;
   padding: 0;
 }
 
@@ -65,7 +71,7 @@ button:hover {
 
 header {
   display: flex;
-  height: 73px;
+  height: 38px;
   width: 83.6%;
   margin-left: 10.8%;
   margin-top: 16px;
@@ -79,11 +85,11 @@ header nav {
 
 header nav ul {
   width: 100%;
+  height: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
-
-/* ************************************************************ HERO ************************************************************ */
 
 /* ************************************************************ FOOTER ************************************************************ */
 footer {
@@ -121,8 +127,9 @@ footer p {
 
 .contact {
   display: flex;
-  row-gap: 16px;
+  row-gap: 20px;
   flex-direction: column;
+  align-items: center;
 }
 
 .legal {
