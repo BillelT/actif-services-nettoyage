@@ -14,7 +14,9 @@ html {
   font-family: "Montserrat", Arial, sans-serif;
   background: #fefffe;
   scroll-behavior: smooth;
+  overflow-x: hidden;
 }
+
 h1 {
   font-size: 60px;
   font-weight: 600;
@@ -195,14 +197,14 @@ header nav ul {
   position: relative;
   width: 100%;
   height: auto;
-  border-radius: 26px;
+  border-radius: 16px;
   transform: translateX(-110px);
 }
 
 .customer-infos img {
   display: block;
   object-fit: cover;
-  border-radius: 26px;
+  border-radius: 16px;
   min-width: 586px;
 }
 
@@ -264,7 +266,7 @@ header nav ul {
   margin: 64px 0 0 15%;
   display: flex;
   justify-content: space-between;
-  width: 48.67vw;
+  width: 55.554%;
 }
 
 .choice a {
