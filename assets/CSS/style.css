@@ -74,7 +74,7 @@ header {
   display: flex;
   height: auto;
   width: 100%;
-  padding: 16px 5.55% 16px 10.8%;
+  padding: 16px 5.55% 8px 10.8%;
   background: transparent;
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
@@ -103,7 +103,7 @@ header nav ul {
   content: "";
   position: absolute;
   width: 100%;
-  height: 707px;
+  height: 100vh;
   top: 0;
   left: 0;
   background: url(/médias/Background-hero.webp) no-repeat;
@@ -203,6 +203,7 @@ header nav ul {
   display: block;
   object-fit: cover;
   border-radius: 26px;
+  min-width: 586px;
 }
 
 .prev,

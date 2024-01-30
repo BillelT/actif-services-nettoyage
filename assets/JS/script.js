@@ -10,10 +10,10 @@ window.addEventListener("scroll", (e) => {
     header.style.top = "0";
     header.style.left = "0";
     header.style.background = "#fefffe";
-    header.style.borderBottom = "0.5px solid #0D1321";
+    header.style.padding = "8px 5.55% 8px 10.8%";
   } else {
+    header.style.padding = "16px 5.55% 8px 10.8%";
     header.style.background = "transparent";
-    header.style.borderBottom = "none";
     header.style.position = "relative";
   }
 });
