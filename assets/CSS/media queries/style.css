@@ -5,60 +5,108 @@
     .choice {
         width: 70%;
     }
-    footer {
-        padding-right: 8%;
-    }
     .footer-container{
         column-gap: 0;
+        margin-right: 8%;
     }
 }
 
 @media screen and (max-width:960px) {
-    h1 {
-        font-size: 48px;
+    header{
+        padding-left: 6.1%;
     }
-    h2 {
-        font-size: 36px;
-    }
+    .hero, .trust, .simulation {
+        margin-left: 6.1%;
+      }
     .carrousel {
-        width: 100%;
+        width: unset;
     }
     .color-change-text::before {
         width: 76px;
     }
-    .customer {
-        overflow: hidden;
-    }
     .customer-infos {
-        border-radius: 8px;
         transform: translateX(-140px);
     }
     .customer-infos img {
-        border-radius: 8px;
         min-width: 480px;
     }
-    /* .advantage {
+    .advantage {
         width: 96%;
         margin-left: 1%;
     }
     .choice {
         width: 76%;
         margin-left: 12%;
-    } */
-    footer {
-        padding-right: 0;
+    }
+    .footer-container {
+        margin-right: 0;
+        margin-left: 6.1%;
     }
     .footer-nav {
-        transform: translateX(-48px);
+        transform: translateX(-10%);
     }
 }
 
-@media screen and (max-width:740px) {
-    h1 {
-        font-size: 40px;
+
+@media screen and (max-width:730px) {
+    header nav ul {
+        z-index: 2;
+        position: fixed;
+        right: -100%;
+        top: 82px;
+        width: 100%;
+        height: auto;
+        flex-direction: column;
+        align-items: flex-start;
+        padding-left: 6.1%;
+        padding-bottom: 8px;
+        row-gap: 16px;
+        background: #fefffe;
+        transition: all 0.4s ease-in-out;
+      }
+    header ul li::after {
+        visibility: visible;
+        opacity: 1;
+        content: "";
+        position: absolute;
+        width: 100%;
+        top: 50px;
+        left: 0;
+        height: 200px;
+        color: black;
+        z-index: 10000;
+      }
+    .nav.mobile-nav-clicked {
+        right: 0;
     }
-    h2 {
-        font-size: 28px;
+    .mobile-menu {
+        display: block;
+        transition: 0.4s ease-in-out;
+        position: relative;
+        cursor: pointer;
+      }
+    .advantage {
+        flex-direction: column;
+        row-gap: 64px;
+    }
+    .choice {
+        flex-direction: column;
+        row-gap: 32px;
+        align-items: center;
+    }
+    .footer-container{
+        flex-direction: column;
+    }
+    .footer-nav{
+        flex-direction: column;
+        align-items: flex-start;
+        row-gap: 24px;
+        transform: translateX(0);
+    }
+    .contact {
+        flex-direction: row;
+        column-gap: 32px;
+        margin-bottom: 64px;
     }
 
 }

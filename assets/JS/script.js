@@ -2,6 +2,7 @@ const arrows = document.querySelectorAll(".arrow");
 const customers = document.querySelectorAll(".customer");
 const Dates = new Date();
 const Year = Dates.getFullYear();
+const navLinks = ["Contrats", "Prestations", "Contact","Devis"];
 
 //make the header fixed to the top after 3 scrolls from the user
 window.addEventListener("scroll", (e) => {
@@ -10,9 +11,11 @@ window.addEventListener("scroll", (e) => {
     header.style.top = "0";
     header.style.left = "0";
     header.style.background = "#fefffe";
-    header.style.padding = "8px 5.55% 8px 10.8%";
+    header.style.paddingBottom = "8px";
+    header.style.paddingTop = "8px";
   } else {
-    header.style.padding = "16px 5.55% 8px 10.8%";
+    header.style.paddingBottom = "16px";
+    header.style.paddingTop = "16px";
     header.style.background = "transparent";
     header.style.position = "relative";
   }
@@ -31,6 +34,24 @@ arrows.forEach((arrow) => {
     customerActive.classList.remove("active");
   });
 });
+
+
+// Burger Menu
+document.addEventListener("click", (e) => {
+  console.log(e);
+  if (e.target.innerText === "☰") {
+    nav.classList.toggle("mobile-nav-clicked");
+    mobileMenu.innerText = "X";
+  } else if (e.target.innerText === "X") {
+    nav.classList.toggle("mobile-nav-clicked");
+    mobileMenu.innerText = "☰";
+  }
+  if (navLinks.includes(e.target.innerText)) {
+    nav.classList.toggle("mobile-nav-clicked");
+    mobileMenu.innerText = "☰";
+  }
+})
+
 
 // credits year auto update
 meta.innerText =
