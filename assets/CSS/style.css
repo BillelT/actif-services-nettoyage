@@ -153,6 +153,34 @@ header nav ul {
   height: auto;
 }
 
+.prev,
+.next {
+  cursor: pointer;
+  transition: 0.3s ease-in-out;
+  position: absolute;
+  z-index: 10;
+}
+
+.prev {
+  top: 0;
+  left: -64px;
+  height: 32px;
+}
+
+.next {
+  top: 0;
+  height: 32px;
+  left: -16px;
+}
+
+.prev:hover {
+  transform: translateX(-8px);
+}
+
+.next:hover {
+  transform: translateX(8px);
+}
+
 .customer {
   position: absolute;
   display: flex;
@@ -220,32 +248,8 @@ header nav ul {
   min-width: 586px;
 }
 
-.prev,
-.next {
-  cursor: pointer;
-  transition: 0.3s ease-in-out;
-  position: absolute;
-  z-index: 10;
-}
-
-.prev {
-  top: 0;
-  left: -64px;
-  height: 32px;
-}
-
-.next {
-  top: 0;
-  height: 32px;
-  left: -16px;
-}
-
-.prev:hover {
-  transform: translateX(-8px);
-}
-
-.next:hover {
-  transform: translateX(8px);
+.bullets{
+  display: none;
 }
 
 /* ************************************************************ SIMULATION ************************************************************ */

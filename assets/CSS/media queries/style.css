@@ -162,17 +162,29 @@
         width: 220px;
         height: 46px;
     }
-
+    
     .join-us button {
         border-radius: 12px;
     }
-
+    
     .carrousel {
         margin-left: 0;
     }
 
+    .prev {
+        display: none;
+    }
+    
+    .next {
+        display: none;
+    }
     .customer {
         flex-direction: column;
+        top: 0;
+        left: 1000px;
+    }
+    .customer.active {
+        left: 0;
     }
 
     .color-change-text {
@@ -199,28 +211,37 @@
         width: 100vw;
         transform: translateX(-6.1%);
         min-width: unset;
-        height: 180px;
+        height: 210px;
         border-radius: 0px;
+        object-position: unset;
     }
-    .customer-infos::after {
-        content: "";
-        position: absolute;
-        left: 50%;
-        bottom: -32px;
-        transform: translateX(-56.1%);
-        z-index: 10;
-        width: 24px;
-        height: 24px;
+
+    .bullets {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        column-gap: 8px;
+        margin-top: 8px;
+        width: 100%;
+    }
+    .bullets span {
+        background: #0d1321;
+        width: 16px;
+        height: 16px;
         border-radius: 50%;
+    }
+    .bullets span.bulletActive {
         border: 1px solid #0d1321;
         background: #fefffe;
+        width: 24px;
+        height: 24px;
     }
 
-    .prev {
-        display: none;
+    .choice a {
+        width: 210px;
+        height: 38.98px;
     }
-
-    .next {
-        display: none;
+    .choice a button{
+        border-radius: 12px;
     }
 }
