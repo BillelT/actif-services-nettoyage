@@ -166,25 +166,54 @@
     .join-us button {
         border-radius: 12px;
     }
-    .carrousel{
+
+    .carrousel {
         margin-left: 0;
     }
-    .active {
-        left: -6.1%;
+
+    .customer {
+        flex-direction: column;
     }
+
+    .color-change-text {
+        margin: unset;
+        color: #0d1321;
+        padding-bottom: 16px;
+        font-size: 26px;
+    }
+
     .color-change-text::before {
-        width: 38px;
+        display: none;
     }
+
     .active .color-change-text {
         opacity: 1;
-        left: 6.1%;
         top: 0;
     }
-    .customer-infos  {
-        transform: translateX(-160px);
+
+    .customer-infos {
+        transform: translateX(0px);
     }
+    
     .customer-infos img {
-        min-width: 234px;
+        width: 100vw;
+        transform: translateX(-6.1%);
+        min-width: unset;
+        height: 180px;
+        border-radius: 0px;
+    }
+    .customer-infos::after {
+        content: "";
+        position: absolute;
+        left: 50%;
+        bottom: -32px;
+        transform: translateX(-56.1%);
+        z-index: 10;
+        width: 24px;
+        height: 24px;
+        border-radius: 50%;
+        border: 1px solid #0d1321;
+        background: #fefffe;
     }
 
     .prev {
