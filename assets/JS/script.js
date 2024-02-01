@@ -13,11 +13,13 @@ window.addEventListener("scroll", (e) => {
     header.style.background = "#fefffe";
     header.style.paddingBottom = "8px";
     header.style.paddingTop = "8px";
-  } else {
+    nav.style.top ="58.8px"
+  } else if(mobileMenu.innerText !== "X") {
     header.style.paddingBottom = "16px";
     header.style.paddingTop = "16px";
-    header.style.background = "transparent";
     header.style.position = "relative";
+    nav.style.top ="68.8px"
+    header.style.background = "transparent";
   }
 });
 
@@ -42,13 +44,16 @@ document.addEventListener("click", (e) => {
   if (e.target.innerText === "☰") {
     nav.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "X";
+    header.style.background = "#fefffe"
   } else if (e.target.innerText === "X") {
     nav.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "☰";
+    header.style.background = "transparent"
   }
   if (navLinks.includes(e.target.innerText)) {
     nav.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "☰";
+    header.style.background = "transparent"
   }
 })
 

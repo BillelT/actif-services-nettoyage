@@ -20,6 +20,7 @@ html {
 h1 {
   font-size: calc(28px + 2.2vw);
   font-weight: 600;
+  max-width: 90%;
 }
 
 h2 {
