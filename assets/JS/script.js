@@ -14,12 +14,14 @@ window.addEventListener("scroll", (e) => {
     header.style.paddingBottom = "8px";
     header.style.paddingTop = "8px";
     navMobile.style.top ="58.8px"
+    trust.style.paddingTop = "256px"
   } else if(mobileMenu.innerText !== "X") {
     header.style.paddingBottom = "16px";
     header.style.paddingTop = "16px";
     header.style.position = "relative";
     navMobile.style.top ="68.8px"
     header.style.background = "transparent";
+    trust.style.paddingTop = "128px"
   }
 });
 
