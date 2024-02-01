@@ -77,14 +77,14 @@
         transition: all 0.4s ease-in-out;
     }
 
-    nav li {
+    header nav li {
         border-bottom: 1px solid #0d1321;
         width: 100vw;
         transform: translateX(-6.1%);
         position: relative;
     }
 
-    nav li::after {
+    header nav li::after {
         content: "\2192";
         position: absolute;
         top: 0;
@@ -93,7 +93,7 @@
         transform: translateY(4px);
     }
 
-    nav li a {
+    header nav li a {
         display: block;
         padding: 8px 0 8px 6.1%;
         width: 94.9%;
@@ -180,9 +180,11 @@
         left: 6.1%;
         top: 0;
     }
+    .customer-infos  {
+        transform: translateX(-160px);
+    }
     .customer-infos img {
         min-width: 234px;
-        transform: translateX(-20px);
     }
 
     .prev {
