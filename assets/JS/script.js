@@ -5,6 +5,13 @@ const customers = document.querySelectorAll(".customer");
 const Dates = new Date();
 const Year = Dates.getFullYear();
 const navLinks = ["Contrats", "Prestations", "Contact", "Devis"];
+let screenWidth = window.innerWidth;
+
+if (screenWidth < 700) {
+  heroImg.src = "./médias/Background-hero-mobile.webp";
+} else {
+  heroImg.src = "./médias/Background-hero.webp";
+}
 
 //make the header fixed to the top after 3 scrolls from the user
 window.addEventListener("scroll", (e) => {
