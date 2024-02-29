@@ -6,27 +6,11 @@
   .choice {
     width: 70%;
   }
-
-  .footer-container {
-    column-gap: 0;
-    margin-right: 8%;
-  }
 }
 
 @media screen and (max-width: 960px) {
-  .container,
-  header,
-  footer {
+  .container {
     padding-left: 6.1%;
-  }
-
-  .join-us {
-    width: 260px;
-    height: 54px;
-  }
-
-  .join-us button {
-    border-radius: 16px;
   }
 
   .carrousel {
@@ -54,69 +38,9 @@
     width: 76%;
     margin-left: 12%;
   }
-
-  .footer-nav {
-    transform: translateX(-10%);
-  }
 }
 
 @media screen and (max-width: 730px) {
-  header nav ul {
-    z-index: 2;
-    position: fixed;
-    right: -100%;
-    top: 55px;
-    width: 100%;
-    height: auto;
-    flex-direction: column;
-    align-items: flex-start;
-    padding: 24px 0 16px 6.1%;
-    row-gap: 8px;
-    background: #fefffe;
-    transition: all 0.4s ease-in-out;
-  }
-
-  header nav li {
-    border-bottom: 1px solid #0d1321;
-    width: 100vw;
-    transform: translateX(-6.1%);
-    position: relative;
-  }
-
-  header nav li::after {
-    content: "\2192";
-    position: absolute;
-    top: 0;
-    left: 83.6%;
-    font-size: 24px;
-    transform: translateY(4px);
-  }
-
-  header nav li a {
-    display: block;
-    padding: 8px 0 8px 6.1%;
-    width: 94.9%;
-  }
-
-  .no-border {
-    border: none;
-  }
-
-  .no-border a {
-    padding-bottom: 0;
-  }
-
-  .nav.mobile-nav-clicked {
-    right: 0;
-  }
-
-  .mobile-menu {
-    display: block;
-    transition: 0.4s ease-in-out;
-    position: relative;
-    cursor: pointer;
-  }
-
   .advantage {
     flex-direction: column;
     row-gap: 64px;
@@ -130,43 +54,9 @@
     row-gap: 48px;
     padding-right: 6.1%;
   }
-
-  .footer-container {
-    flex-direction: column;
-  }
-  .logo {
-    width: 95px;
-    height: 26px;
-  }
-
-  .footer-nav {
-    flex-direction: column;
-    align-items: flex-start;
-    row-gap: 24px;
-    transform: translateX(0);
-  }
-
-  .contact {
-    flex-direction: row;
-    column-gap: 20vw;
-    margin-bottom: 64px;
-  }
-  .legal {
-    align-items: start;
-    text-align: left;
-  }
 }
 
 @media screen and (max-width: 590px) {
-  .join-us {
-    width: 220px;
-    height: 46px;
-  }
-
-  .join-us button {
-    border-radius: 12px;
-  }
-
   .carrousel {
     margin-left: 0;
   }

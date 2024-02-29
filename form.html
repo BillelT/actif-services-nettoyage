@@ -5,6 +5,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Actif Services Nettoyage</title>
     <link rel="stylesheet" href="./assets/CSS/form.css" />
+    <link rel="stylesheet" href="./assets/CSS/header.css" />
+    <link rel="stylesheet" href="./assets/CSS/footer.css" />
     <meta
       name="description"
       content="Actif Services Nettoyage est une jeune entreprise d'entretien industriel & de bureau. Nous travaillons ensemble afin de vous proposez les meilleurs services possible."
@@ -12,17 +14,18 @@
     <link rel="icon" href="./médias/logo asn 2.png" />
   </head>
   <body>
-    <header>
-      <a href="/">
+    <header id="header">
+      <a href="index.html">
         <img
           src="./médias/logo asn 2.png"
           alt="logo Actif Services Nettoyage"
           width="138"
           height="38"
+          class="logo"
         />
       </a>
       <nav>
-        <ul>
+        <ul class="nav" id="navMobile">
           <li>
             <a href="/form.html">Contrats</a>
           </li>
@@ -32,21 +35,30 @@
           <li>
             <a href="#contact">Contact</a>
           </li>
-          <li>
+          <li class="no-border">
             <a href="/form.html">Devis</a>
           </li>
         </ul>
       </nav>
+      <span class="mobile-menu" id="mobileMenu">&#9776;</span>
     </header>
-    <main></main>
+    <main>
+      <section class="container hero">
+        <h1>Actif Services Nettoyage</h1>
+        <a class="join-us" href="/form.html">
+          <button>Nous rejoindre</button>
+        </a>
+      </section>
+    </main>
     <footer>
       <div class="footer-container">
-        <a href="/">
+        <a href="index.html" style="height: 40px">
           <img
             src="./médias/logo asn 2.png"
             alt="logo Actif Services Nettoyage"
             width="145"
             height="40"
+            class="logo"
           />
         </a>
         <div class="footer-nav">
@@ -63,6 +75,19 @@
               </li>
               <li>
                 <a href="/form.html">Devis</a>
+              </li>
+            </ul>
+          </nav>
+          <nav>
+            <ul>
+              <li>
+                <a href="#">Mentions légales</a>
+              </li>
+              <li>
+                <a href="#">Politique de confidentalités</a>
+              </li>
+              <li>
+                <a href="#">CGV</a>
               </li>
             </ul>
           </nav>
@@ -92,19 +117,6 @@
               />
             </a>
           </div>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Mentions légales</a>
-              </li>
-              <li>
-                <a href="#">Politique de confidentalités</a>
-              </li>
-              <li>
-                <a href="#">CGV</a>
-              </li>
-            </ul>
-          </nav>
         </div>
       </div>
       <div class="legal">
