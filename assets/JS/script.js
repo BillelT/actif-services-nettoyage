@@ -15,13 +15,13 @@ window.addEventListener("scroll", (e) => {
     header.style.background = "#fefffe";
     header.style.paddingBottom = "8px";
     header.style.paddingTop = "8px";
-    navMobile.style.top = "58.8px";
+    navMobile.style.top = "47px";
     trust.style.paddingTop = "202.8px";
   } else if (mobileMenu.innerText !== "X") {
     header.style.paddingBottom = "16px";
     header.style.paddingTop = "16px";
     header.style.position = "relative";
-    navMobile.style.top = "68.8px";
+    navMobile.style.top = "55px";
     header.style.background = "transparent";
     trust.style.paddingTop = "128px";
   }
