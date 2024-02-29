@@ -6,12 +6,13 @@ const Dates = new Date();
 const Year = Dates.getFullYear();
 const navLinks = ["Contrats", "Prestations", "Contact", "Devis"];
 const url = window.location.href;
-const typeOption = document.querySelectorAll(".type");
+const typeOptions = document.querySelectorAll(".type");
+const movedSection = document.querySelector(".movedSection");
 let screenWidth = window.innerWidth;
 
 if (!url.includes("form")) {
 } else {
-  typeOption.forEach((option) => {
+  typeOptions.forEach((option) => {
     if (url.includes("contract") && option.value === "contract") {
       option.selected = true;
     } else if (url.includes("unique") && option.value === "unique") {
@@ -19,7 +20,6 @@ if (!url.includes("form")) {
     }
   });
 }
-console.log(url);
 
 if (screenWidth < 700) {
   heroImg.src = "./médias/Background-hero-mobile.webp";
@@ -85,22 +85,11 @@ slides.forEach((slide) => {
       if (newActive >= [...customers].length) newActive = 0;
       customers[newActive].classList.add("active");
       customerActive.classList.remove("active");
-      console.log(newActive);
 
       bullets.forEach((bullet) => {
         bullet.style.transition = "0.4s ease-in-out";
-        if (newActive === 0) {
-          bullet.classList.remove("bulletActive");
-          bullets[0].classList.add("bulletActive");
-        }
-        if (newActive === 1) {
-          bullet.classList.remove("bulletActive");
-          bullets[1].classList.add("bulletActive");
-        }
-        if (newActive === 2) {
-          bullet.classList.remove("bulletActive");
-          bullets[2].classList.add("bulletActive");
-        }
+        bullet.classList.remove("bulletActive");
+        bullets[newActive].classList.add("bulletActive");
       });
     },
     { passive: true }

@@ -116,9 +116,7 @@ input {
   outline: none;
 }
 
-input::placeholder,
-select::placeholder,
-option {
+input::placeholder {
   font-weight: 300;
 }
 

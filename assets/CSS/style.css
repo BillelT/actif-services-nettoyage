@@ -189,6 +189,7 @@ button:hover {
   object-fit: cover;
   border-radius: 16px;
   min-width: 586px;
+  max-width: 785px;
 }
 
 .bullets {
