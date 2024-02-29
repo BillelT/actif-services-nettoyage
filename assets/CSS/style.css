@@ -37,6 +37,12 @@ h3 {
   font-weight: 500;
 }
 
+.container,
+header,
+footer {
+  padding-left: 8.33%;
+}
+
 a {
   font-size: 18px;
   font-weight: 500;
@@ -81,7 +87,7 @@ header {
   display: flex;
   height: auto;
   width: 100%;
-  padding: 16px 5.55% 8px 10.8%;
+  padding: 16px 8.33% 8px;
   background: transparent;
   align-items: center;
   justify-content: space-between;
@@ -110,14 +116,14 @@ header nav ul {
 /* ************************************************************ HERO ************************************************************ */
 
 .hero {
-  margin: 256px 0 256px 10.8%;
+  margin: 256px 0 256px 0;
 }
 
 .hero::before {
   content: "";
   position: absolute;
   width: 100%;
-  height: 98vh;
+  height: 759px;
   top: 0;
   left: 0;
   background: url(/médias/Background-hero.webp) no-repeat;
@@ -137,12 +143,17 @@ header nav ul {
   width: 100%;
   height: 100%;
   border-radius: 20px;
+  background-color: #e62701;
+}
+.join-us button:hover {
+  background-color: #0180a8;
 }
 
 /* ************************************************************ TRUST ************************************************************ */
 .trust {
-  margin-left: 10.8%;
+  margin-left: 0;
   padding-top: 128px;
+  margin-bottom: 128px;
 }
 
 .carrousel {
@@ -248,15 +259,16 @@ header nav ul {
   min-width: 586px;
 }
 
-.bullets{
+.bullets {
   display: none;
 }
 
 /* ************************************************************ SIMULATION ************************************************************ */
 
 .simulation {
-  margin-top: 128px;
-  margin-left: 10.8%;
+  padding-top: 128px;
+  padding-bottom: 128px;
+  background-color: #f7f7f7;
 }
 
 .advantage {
@@ -272,7 +284,6 @@ header nav ul {
   flex-direction: column;
   align-items: center;
   row-gap: 16px;
-  text-align: center;
 }
 
 .advantage img {
@@ -298,9 +309,9 @@ header nav ul {
 
 /* ************************************************************ FOOTER ************************************************************ */
 footer {
-  margin-top: 128px;
   background: #0d1321;
-  padding: 64px 0 32px 0;
+  padding-top: 64px;
+  padding-bottom: 32px;
   width: 100%;
   min-height: 466px;
   color: #fefffe;
@@ -321,7 +332,7 @@ footer p {
 .footer-container {
   display: flex;
   column-gap: 49px;
-  margin: 0 14.5% 0 10.8%;
+  margin: 0 14.5% 0 0;
 }
 
 .footer-nav {
