@@ -15,15 +15,15 @@ window.addEventListener("scroll", (e) => {
     header.style.background = "#fefffe";
     header.style.paddingBottom = "8px";
     header.style.paddingTop = "8px";
-    navMobile.style.top = "58.8px"
-    trust.style.paddingTop = "202.8px"
+    navMobile.style.top = "58.8px";
+    trust.style.paddingTop = "202.8px";
   } else if (mobileMenu.innerText !== "X") {
     header.style.paddingBottom = "16px";
     header.style.paddingTop = "16px";
     header.style.position = "relative";
-    navMobile.style.top = "68.8px"
+    navMobile.style.top = "68.8px";
     header.style.background = "transparent";
-    trust.style.paddingTop = "128px"
+    trust.style.paddingTop = "128px";
   }
 });
 
@@ -32,7 +32,7 @@ arrows.forEach((arrow) => {
   arrow.addEventListener("click", (e) => {
     const nextCustomer = e.target.id === "next" ? 1 : -1;
     const customerActive = document.querySelector(".active");
-    
+
     newActive = nextCustomer + [...customers].indexOf(customerActive);
     if (newActive < 0) newActive = [...customers].length - 1;
     if (newActive >= [...customers].length) newActive = 0;
@@ -45,14 +45,14 @@ arrows.forEach((arrow) => {
 slides.forEach((slide) => {
   slide.addEventListener("touchstart", (e) => {
     touchStartX = e.touches[0].clientX;
-  })
+  });
   slide.addEventListener("touchend", (e) => {
     touchEndX = e.changedTouches[0].clientX;
     const swipeDistance = touchStartX - touchEndX;
-    
-    const nextCustomer = swipeDistance > 0  ? 1 : -1;
+
+    const nextCustomer = swipeDistance > 0 ? 1 : -1;
     const customerActive = document.querySelector(".active");
-    
+
     newActive = nextCustomer + [...customers].indexOf(customerActive);
     if (newActive < 0) newActive = [...customers].length - 1;
     if (newActive >= [...customers].length) newActive = 0;
@@ -74,31 +74,28 @@ slides.forEach((slide) => {
         bullet.classList.remove("bulletActive");
         bullets[2].classList.add("bulletActive");
       }
-    })
-  })
+    });
+  });
 });
-
-
 
 // Burger Menu
 document.addEventListener("click", (e) => {
   if (e.target.innerText === "☰") {
     navMobile.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "X";
-    header.style.background = "#fefffe"
+    header.style.background = "#fefffe";
   } else if (e.target.innerText === "X") {
     navMobile.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "☰";
-    header.style.background = "transparent"
+    header.style.background = "transparent";
   }
   if (navLinks.includes(e.target.innerText)) {
     navMobile.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "☰";
-    header.style.background = "transparent"
+    header.style.background = "transparent";
   }
-})
-
+});
 
 // credits year auto update
 meta.innerText =
-  "Actif Services Nettoyage © " + Year + " - Tous droits réservés";
+  "© " + Year + " Actif Services Nettoyage " + " Tous droits réservés";
