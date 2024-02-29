@@ -23,14 +23,14 @@ window.addEventListener("scroll", (e) => {
     header.style.paddingBottom = "8px";
     header.style.paddingTop = "8px";
     navMobile.style.top = "47px";
-    trust.style.paddingTop = "202.8px";
+    movedSection.style.paddingTop = "203px";
   } else if (mobileMenu.innerText !== "X") {
+    header.style.position = "relative";
     header.style.paddingBottom = "16px";
     header.style.paddingTop = "16px";
-    header.style.position = "relative";
     navMobile.style.top = "55px";
     header.style.background = "transparent";
-    trust.style.paddingTop = "128px";
+    movedSection.style.paddingTop = "128px";
   }
 });
 

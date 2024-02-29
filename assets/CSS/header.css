@@ -66,7 +66,7 @@ header nav ul {
 
 @media screen and (max-width: 960px) {
   header {
-    padding-left: 6.1%;
+    padding-left: 6.25%;
   }
 
   .join-us {
@@ -89,7 +89,7 @@ header nav ul {
     height: auto;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 0 16px 6.1%;
+    padding: 24px 0 16px 6.25%;
     row-gap: 8px;
     background: #fefffe;
     transition: all 0.4s ease-in-out;
@@ -98,7 +98,7 @@ header nav ul {
   header nav li {
     border-bottom: 1px solid #0d1321;
     width: 100vw;
-    transform: translateX(-6.1%);
+    transform: translateX(-6.25%);
     position: relative;
   }
 
@@ -113,7 +113,7 @@ header nav ul {
 
   header nav li a {
     display: block;
-    padding: 8px 0 8px 6.1%;
+    padding: 8px 0 8px 6.25%;
     width: 94.9%;
   }
 
