@@ -4,10 +4,16 @@
   }
   form {
     font-size: 18px;
-    margin-left: 21.1vw;
   }
   .submit {
     height: 54.4px;
     border-radius: 16px;
+  }
+}
+@media screen and (min-width: 1140px) {
+  form {
+    margin-left: 21.1vw;
+    font-size: 22px;
+    max-width: 692px;
   }
 }

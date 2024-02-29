@@ -5,7 +5,21 @@ const customers = document.querySelectorAll(".customer");
 const Dates = new Date();
 const Year = Dates.getFullYear();
 const navLinks = ["Contrats", "Prestations", "Contact", "Devis"];
+const url = window.location.href;
+const typeOption = document.querySelectorAll(".type");
 let screenWidth = window.innerWidth;
+
+if (!url.includes("form")) {
+} else {
+  typeOption.forEach((option) => {
+    if (url.includes("contract") && option.value === "contract") {
+      option.selected = true;
+    } else if (url.includes("unique") && option.value === "unique") {
+      option.selected = true;
+    }
+  });
+}
+console.log(url);
 
 if (screenWidth < 700) {
   heroImg.src = "./médias/Background-hero-mobile.webp";
