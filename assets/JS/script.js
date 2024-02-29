@@ -43,39 +43,47 @@ arrows.forEach((arrow) => {
 
 // carrousel navigation under 590px width device
 slides.forEach((slide) => {
-  slide.addEventListener("touchstart", (e) => {
-    touchStartX = e.touches[0].clientX;
-  });
-  slide.addEventListener("touchend", (e) => {
-    touchEndX = e.changedTouches[0].clientX;
-    const swipeDistance = touchStartX - touchEndX;
+  slide.addEventListener(
+    "touchstart",
+    (e) => {
+      touchStartX = e.touches[0].clientX;
+    },
+    { passive: true }
+  );
+  slide.addEventListener(
+    "touchend",
+    (e) => {
+      touchEndX = e.changedTouches[0].clientX;
+      const swipeDistance = touchStartX - touchEndX;
 
-    const nextCustomer = swipeDistance > 0 ? 1 : -1;
-    const customerActive = document.querySelector(".active");
+      const nextCustomer = swipeDistance > 0 ? 1 : -1;
+      const customerActive = document.querySelector(".active");
 
-    newActive = nextCustomer + [...customers].indexOf(customerActive);
-    if (newActive < 0) newActive = [...customers].length - 1;
-    if (newActive >= [...customers].length) newActive = 0;
-    customers[newActive].classList.add("active");
-    customerActive.classList.remove("active");
-    console.log(newActive);
+      newActive = nextCustomer + [...customers].indexOf(customerActive);
+      if (newActive < 0) newActive = [...customers].length - 1;
+      if (newActive >= [...customers].length) newActive = 0;
+      customers[newActive].classList.add("active");
+      customerActive.classList.remove("active");
+      console.log(newActive);
 
-    bullets.forEach((bullet) => {
-      bullet.style.transition = "0.4s ease-in-out";
-      if (newActive === 0) {
-        bullet.classList.remove("bulletActive");
-        bullets[0].classList.add("bulletActive");
-      }
-      if (newActive === 1) {
-        bullet.classList.remove("bulletActive");
-        bullets[1].classList.add("bulletActive");
-      }
-      if (newActive === 2) {
-        bullet.classList.remove("bulletActive");
-        bullets[2].classList.add("bulletActive");
-      }
-    });
-  });
+      bullets.forEach((bullet) => {
+        bullet.style.transition = "0.4s ease-in-out";
+        if (newActive === 0) {
+          bullet.classList.remove("bulletActive");
+          bullets[0].classList.add("bulletActive");
+        }
+        if (newActive === 1) {
+          bullet.classList.remove("bulletActive");
+          bullets[1].classList.add("bulletActive");
+        }
+        if (newActive === 2) {
+          bullet.classList.remove("bulletActive");
+          bullets[2].classList.add("bulletActive");
+        }
+      });
+    },
+    { passive: true }
+  );
 });
 
 // Burger Menu
