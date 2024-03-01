@@ -88,6 +88,10 @@ button:hover {
   margin-bottom: 128px;
 }
 
+.trust h2 {
+  margin-bottom: 64px;
+}
+
 .carrousel {
   position: relative;
   width: 100vw;
@@ -95,23 +99,23 @@ button:hover {
 }
 
 .customer {
-  margin-top: 64px;
   position: absolute;
   top: 0;
   left: 0;
+  width: 100%;
   visibility: hidden;
   opacity: 0;
+  transition: all 0.4s ease-in-out;
 }
 
 .customer.active {
-  position: relative;
   z-index: 1;
   opacity: 1;
   visibility: visible;
+  position: relative;
 }
 
 .customer-infos {
-  color: #fefffe;
   position: absolute;
   top: 32px;
   left: 6.25%;
@@ -139,7 +143,7 @@ button:hover {
 
 .img-container {
   overflow: hidden;
-  height: 440px;
+  height: 520px;
 }
 
 .img-container img {
@@ -153,35 +157,79 @@ button:hover {
   align-items: center;
   justify-content: center;
   position: absolute;
-  transform: translateX(-50%);
   width: 73px;
   height: 48px;
-  bottom: 16px;
-  left: 50%;
+  bottom: 48px;
+  left: 6.25%;
   z-index: 100;
 }
 
 .circle {
   position: absolute;
-  left: -14.5px;
-  left: 20.5px;
-  left: 55.5px;
+  left: -11px;
   width: 32px;
   height: 32px;
+  border: 2px solid #7c7c7c;
+  border-radius: 50%;
   background-color: transparent;
+  transition: all 0.4s ease-in-out;
+}
+
+.circle::before {
+  content: "";
+  position: absolute;
+  top: -2px;
+  left: -2px;
+  width: 28px;
+  height: 28px;
+  transform: rotate(45deg);
   border-radius: 50%;
   border: 2px solid #fefffe;
+  clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  animation-name: none;
+}
+
+.circle.animated::before {
+  animation: nextSlide 6s infinite linear;
+}
+
+@keyframes nextSlide {
+  0% {
+    clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
+  }
+  25% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
+  }
+  50% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
+  }
+  75% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
+  }
+  100% {
+    clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
+  }
 }
 
 .bullets-container {
   display: flex;
-  gap: 32px;
+  z-index: 100;
 }
 
 .slider-bullet {
   display: inline-block;
   width: 3px;
   height: 3px;
+  padding: 16px;
+  border-radius: 50%;
+}
+.slider-bullet:after {
+  content: "";
+  position: absolute;
+  display: inline-block;
+  width: 3px;
+  height: 3px;
+  transform: translate(-0.75px, -0.75px);
   border-radius: 50%;
   background-color: #fefefe;
 }

@@ -10,9 +10,22 @@
 
 @media screen and (min-width: 960px) {
   .carrousel {
-    max-width: 1200px;
+    max-width: 1400px;
     width: 83.3vw;
     margin-left: 0;
+  }
+  .customer-infos h3 {
+    font-size: 30px;
+  }
+  .customer-infos p {
+    font-size: 18px;
+  }
+
+  .customer-infos a {
+    font-size: 18px;
+  }
+  .img-container {
+    height: 608px;
   }
 }
 

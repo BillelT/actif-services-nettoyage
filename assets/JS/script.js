@@ -1,6 +1,5 @@
-const arrows = document.querySelectorAll(".arrow");
 const slides = document.querySelectorAll(".slides");
-const bullets = document.querySelectorAll(".bullet");
+const bullets = document.querySelectorAll(".slider-bullet");
 const customers = document.querySelectorAll(".customer");
 const Dates = new Date();
 const Year = Dates.getFullYear();
@@ -48,51 +47,56 @@ window.addEventListener("scroll", (e) => {
   }
 });
 
+// animate circle depending on current slide
+function circleAnimation(newActive) {
+  if ([...customers].indexOf(newActive) === 0) {
+    circleLoad.style.transform = "translateX(0px)";
+    circleLoad.classList.remove("animated");
+    void circleLoad.offsetWidth;
+    circleLoad.classList.add("animated");
+  }
+  if ([...customers].indexOf(newActive) === 1) {
+    circleLoad.style.transform = "translateX(32px)";
+    circleLoad.classList.remove("animated");
+    void circleLoad.offsetWidth;
+    circleLoad.classList.add("animated");
+  }
+  if ([...customers].indexOf(newActive) === 2) {
+    circleLoad.style.transform = "translateX(64px)";
+    circleLoad.classList.remove("animated");
+    void circleLoad.offsetWidth;
+    circleLoad.classList.add("animated");
+  }
+}
+
+// carrousel auto animation
+function autoAnimation() {
+  let customerActive = document.querySelector(".active");
+  let newIndex = [...customers].indexOf(customerActive) + 1;
+  if (newIndex >= [...customers].length) newIndex = 0;
+  if (newIndex < 0) newIndex = [...customers].length - 1;
+  const newActive = customers[newIndex];
+  circleAnimation(newActive);
+  customerActive.classList.remove("active");
+  newActive.classList.add("active");
+}
+
+let intervalId = setInterval(autoAnimation, 6000);
+
 // carrousel navigation
-arrows.forEach((arrow) => {
-  arrow.addEventListener("click", (e) => {
-    const nextCustomer = e.target.id === "next" ? 1 : -1;
-    const customerActive = document.querySelector(".active");
+bullets.forEach((bullet) => {
+  bullet.addEventListener("click", () => {
+    let bulletIndex = [...bullets].indexOf(bullet);
+    let customerActive = document.querySelector(".active");
+    const newActive = customers[bulletIndex];
 
-    newActive = nextCustomer + [...customers].indexOf(customerActive);
-    if (newActive < 0) newActive = [...customers].length - 1;
-    if (newActive >= [...customers].length) newActive = 0;
-    customers[newActive].classList.add("active");
+    clearInterval(intervalId);
+    intervalId = setInterval(autoAnimation, 6000);
+
+    circleAnimation(newActive);
     customerActive.classList.remove("active");
+    newActive.classList.add("active");
   });
-});
-
-// carrousel navigation under 590px width device
-slides.forEach((slide) => {
-  slide.addEventListener(
-    "touchstart",
-    (e) => {
-      touchStartX = e.touches[0].clientX;
-    },
-    { passive: true }
-  );
-  slide.addEventListener(
-    "touchend",
-    (e) => {
-      touchEndX = e.changedTouches[0].clientX;
-      const swipeDistance = touchStartX - touchEndX;
-
-      const nextCustomer = swipeDistance > 0 ? 1 : -1;
-      const customerActive = document.querySelector(".active");
-
-      newActive = nextCustomer + [...customers].indexOf(customerActive);
-      if (newActive < 0) newActive = [...customers].length - 1;
-      if (newActive >= [...customers].length) newActive = 0;
-      customers[newActive].classList.add("active");
-      customerActive.classList.remove("active");
-
-      bullets.forEach((bullet) => {
-        bullet.classList.remove("bulletActive");
-        bullets[newActive].classList.add("bulletActive");
-      });
-    },
-    { passive: true }
-  );
 });
 
 // Burger Menu
