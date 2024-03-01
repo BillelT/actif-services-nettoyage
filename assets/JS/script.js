@@ -87,7 +87,6 @@ slides.forEach((slide) => {
       customerActive.classList.remove("active");
 
       bullets.forEach((bullet) => {
-        bullet.style.transition = "0.4s ease-in-out";
         bullet.classList.remove("bulletActive");
         bullets[newActive].classList.add("bulletActive");
       });

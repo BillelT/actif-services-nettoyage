@@ -71,10 +71,6 @@
   .customer {
     flex-direction: column;
     top: 0;
-    left: 1000px;
-  }
-  .customer.active {
-    left: 0;
   }
 
   .color-change-text {
@@ -115,10 +111,12 @@
     width: 100%;
   }
   .bullets span {
+    position: relative;
     background: #0d1321;
     width: 16px;
     height: 16px;
     border-radius: 50%;
+    transition: all 0.4s ease-in-out;
   }
   .bullets span.bulletActive {
     border: 1px solid #0d1321;
