@@ -8,6 +8,7 @@ const url = window.location.href;
 const typeOptions = document.querySelectorAll(".type");
 const movedSection = document.querySelector(".movedSection");
 let screenWidth = window.innerWidth;
+let touchStartX;
 
 if (!url.includes("form")) {
 } else {
@@ -86,8 +87,8 @@ let intervalId = setInterval(autoAnimation, 6000);
 // carrousel navigation
 bullets.forEach((bullet) => {
   bullet.addEventListener("click", () => {
-    let bulletIndex = [...bullets].indexOf(bullet);
-    let customerActive = document.querySelector(".active");
+    const bulletIndex = [...bullets].indexOf(bullet);
+    const customerActive = document.querySelector(".active");
     const newActive = customers[bulletIndex];
 
     clearInterval(intervalId);
@@ -97,6 +98,27 @@ bullets.forEach((bullet) => {
     customerActive.classList.remove("active");
     newActive.classList.add("active");
   });
+});
+
+carrousel.addEventListener("touchstart", (e) => {
+  touchStartX = e.touches[0].clientX;
+});
+carrousel.addEventListener("touchend", (e) => {
+  const deltaX = e.changedTouches[0].clientX - touchStartX;
+  if (deltaX <= -120 || deltaX >= 120) {
+    const customerActive = document.querySelector(".active");
+    const indexActive = [...customers].indexOf(customerActive);
+
+    clearInterval(intervalId);
+    intervalId = setInterval(autoAnimation, 6000);
+    let newIndex = deltaX <= 0 ? indexActive + 1 : indexActive - 1;
+    if (newIndex >= [...customers].length) newIndex = 0;
+    if (newIndex < 0) newIndex = [...customers].length - 1;
+    const newActive = customers[newIndex];
+    circleAnimation(newActive);
+    customerActive.classList.remove("active");
+    newActive.classList.add("active");
+  }
 });
 
 // Burger Menu

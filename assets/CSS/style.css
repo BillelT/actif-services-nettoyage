@@ -160,7 +160,7 @@ button:hover {
   width: 73px;
   height: 48px;
   bottom: 48px;
-  left: 6.25%;
+  right: 6.25%;
   z-index: 100;
 }
 
