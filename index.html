@@ -54,43 +54,23 @@
       <section class="container trust movedSection">
         <h2>Ils nous on fait confiance</h2>
         <div class="carrousel">
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="16"
-            viewBox="0 0 32 16"
-            fill="none"
-            class="arrow prev"
-            id="prev"
-          >
-            <path
-              d="M0.306562 8.70711C-0.0839615 8.31658 -0.0839615 7.68342 0.306562 7.29289L6.67052 0.928932C7.06105 0.538408 7.69421 0.538408 8.08474 0.928932C8.47526 1.31946 8.47526 1.95262 8.08474 2.34315L2.42788 8L8.08474 13.6569C8.47526 14.0474 8.47526 14.6805 8.08474 15.0711C7.69421 15.4616 7.06105 15.4616 6.67052 15.0711L0.306562 8.70711ZM31.0137 9H1.01367V7H31.0137V9Z"
-              fill="#0D1321"
-            />
-          </svg>
-          <svg
-            xmlns="http://www.w3.org/2000/svg"
-            width="32"
-            height="16"
-            viewBox="0 0 32 16"
-            fill="none"
-            class="arrow next"
-            id="next"
-          >
-            <path
-              d="M30.7208 8.70711C31.1113 8.31658 31.1113 7.68342 30.7208 7.29289L24.3568 0.928932C23.9663 0.538408 23.3331 0.538408 22.9426 0.928932C22.5521 1.31946 22.5521 1.95262 22.9426 2.34315L28.5995 8L22.9426 13.6569C22.5521 14.0474 22.5521 14.6805 22.9426 15.0711C23.3331 15.4616 23.9663 15.4616 24.3568 15.0711L30.7208 8.70711ZM0.0136719 9H30.0137V7H0.0136719V9Z"
-              fill="#0D1321"
-            />
-          </svg>
-          <div class="customer active">
-            <h3
-              id="colorChangeText"
-              class="color-change-text"
-              data-text="Customer 1"
-            >
-              Customer 1
-            </h3>
+          <article class="customer active">
             <div class="customer-infos">
+              <h3
+                id="colorChangeText"
+                class="color-change-text"
+                data-text="Customer 1"
+              >
+                Customer 1
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+                eligendi reiciendis earum nulla voluptatibus pariatur quo
+                officia cumque quam unde provident consequatur veniam beatae!
+              </p>
+              <a href="#"> Posez leur vos questions ! </a>
+            </div>
+            <div class="img-container">
               <img
                 src="./médias/customer-1.webp"
                 alt="photo client 1"
@@ -100,36 +80,51 @@
                 loading="lazy"
               />
             </div>
-          </div>
-          <div class="customer">
-            <h3
-              id="colorChangeText"
-              class="color-change-text"
-              data-text="Customer 2"
-            >
-              Customer 2
-            </h3>
+          </article>
+          <article class="customer">
             <div class="customer-infos">
+              <h3
+                id="colorChangeText"
+                class="color-change-text"
+                data-text="Customer 2"
+              >
+                Customer 2
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+                eligendi reiciendis earum nulla voluptatibus pariatur quo
+                officia cumque quam unde provident consequatur veniam beatae!
+              </p>
+              <a href="#"> Posez leur vos questions ! </a>
+            </div>
+            <div class="img-container">
               <img
                 src="./médias/customer-2.webp"
                 alt="photo client 2"
                 width="100%"
                 height="auto"
-                style="object-position: 0% 90%"
                 class="slides"
                 loading="lazy"
               />
             </div>
-          </div>
-          <div class="customer">
-            <h3
-              id="colorChangeText"
-              class="color-change-text"
-              data-text="Customer 3"
-            >
-              Customer 3
-            </h3>
+          </article>
+          <article class="customer">
             <div class="customer-infos">
+              <h3
+                id="colorChangeText"
+                class="color-change-text"
+                data-text="Customer 3"
+              >
+                Customer 3
+              </h3>
+              <p>
+                Lorem ipsum dolor sit amet consectetur adipisicing elit. Harum,
+                eligendi reiciendis earum nulla voluptatibus pariatur quo
+                officia cumque quam unde provident consequatur veniam beatae!
+              </p>
+              <a href="#"> Posez leur vos questions ! </a>
+            </div>
+            <div class="img-container">
               <img
                 src="./médias/customer-3.webp"
                 alt="photo client 3"
@@ -139,11 +134,15 @@
                 loading="lazy"
               />
             </div>
-          </div>
-          <div class="bullets">
-            <span class="bullet bulletActive"></span>
-            <span class="bullet"></span>
-            <span class="bullet"></span>
+          </article>
+          <div class="slider-pagination">
+            <span class="circle"></span>
+            <span class="circle" id="circleActive"></span>
+            <ul class="bullets-container">
+              <li class="slider-bullet"></li>
+              <li class="slider-bullet"></li>
+              <li class="slider-bullet"></li>
+            </ul>
           </div>
         </div>
       </section>
