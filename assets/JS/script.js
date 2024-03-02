@@ -8,7 +8,7 @@ const url = window.location.href;
 const typeOptions = document.querySelectorAll(".type");
 const movedSection = document.querySelector(".movedSection");
 let screenWidth = window.innerWidth;
-let touchStartX;
+let startX, endX;
 
 if (!url.includes("form")) {
 } else {
@@ -100,11 +100,21 @@ bullets.forEach((bullet) => {
   });
 });
 
-carrousel.addEventListener("touchstart", (e) => {
-  touchStartX = e.touches[0].clientX;
+carrousel.addEventListener("mousedown", (e) => {
+  e.preventDefault();
+  startX = e.clientX;
 });
-carrousel.addEventListener("touchend", (e) => {
-  const deltaX = e.changedTouches[0].clientX - touchStartX;
+carrousel.addEventListener(
+  "touchstart",
+  (e) => {
+    startX = e.touches[0].clientX;
+    console.log("début", startX);
+  },
+  { passive: true }
+);
+
+function manualNavigation() {
+  const deltaX = endX - startX;
   if (deltaX <= -120 || deltaX >= 120) {
     const customerActive = document.querySelector(".active");
     const indexActive = [...customers].indexOf(customerActive);
@@ -119,6 +129,16 @@ carrousel.addEventListener("touchend", (e) => {
     customerActive.classList.remove("active");
     newActive.classList.add("active");
   }
+}
+
+carrousel.addEventListener("mouseup", (e) => {
+  endX = e.clientX;
+  manualNavigation();
+});
+carrousel.addEventListener("touchend", (e) => {
+  endX = e.changedTouches[0].clientX;
+  console.log("fin", endX);
+  manualNavigation();
 });
 
 // Burger Menu
