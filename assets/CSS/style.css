@@ -16,6 +16,7 @@ html {
   scroll-behavior: smooth;
   overflow-x: hidden;
 }
+
 body {
   overflow-x: hidden;
 }
@@ -129,6 +130,7 @@ button:hover {
   margin-bottom: 8px;
   font-size: 22px;
 }
+
 .customer-infos p {
   font-size: 14px;
   margin-bottom: 16px;
@@ -178,11 +180,11 @@ button:hover {
 .circle::before {
   content: "";
   position: absolute;
-  top: -2px;
-  left: -2px;
-  width: 28px;
-  height: 28px;
-  transform: rotate(45deg);
+  top: 50%;
+  left: 50%;
+  width: 29px;
+  height: 29px;
+  transform: translate(-50%, -50%) rotate(45deg);
   border-radius: 50%;
   border: 2px solid #fefffe;
   clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
@@ -197,15 +199,19 @@ button:hover {
   0% {
     clip-path: polygon(50% 50%, 0 0, 0 0, 0 0, 0 0, 0 0);
   }
+
   25% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 0, 100% 0, 100% 0);
   }
+
   50% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 100% 100%, 100% 100%);
   }
+
   75% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 100%);
   }
+
   100% {
     clip-path: polygon(50% 50%, 0 0, 100% 0, 100% 100%, 0 100%, 0 0);
   }
@@ -223,6 +229,7 @@ button:hover {
   padding: 16px;
   border-radius: 50%;
 }
+
 .slider-bullet:after {
   content: "";
   position: absolute;

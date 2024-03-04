@@ -1,184 +1,138 @@
 <!DOCTYPE html>
 <html lang="fr">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Actif Services Nettoyage</title>
-    <link rel="stylesheet" href="./assets/CSS/form.css" />
-    <link rel="stylesheet" href="./assets/CSS/header.css" />
-    <link rel="stylesheet" href="./assets/CSS/footer.css" />
-    <link rel="stylesheet" href="./assets/CSS/media queries/form.css" />
-    <meta
-      name="description"
-      content="Actif Services Nettoyage est une jeune entreprise d'entretien industriel & de bureau. Nous travaillons ensemble afin de vous proposez les meilleurs services possible."
-    />
-    <link rel="icon" href="./médias/logo asn 2.png" />
-  </head>
-  <body>
-    <header id="header">
-      <a href="index.html">
-        <img
-          src="./médias/logo asn 2.png"
-          alt="logo Actif Services Nettoyage"
-          width="138"
-          height="38"
-          class="logo"
-        />
+
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Actif Services Nettoyage</title>
+  <link rel="stylesheet" href="./assets/CSS/form.css" />
+  <link rel="stylesheet" href="./assets/CSS/header.css" />
+  <link rel="stylesheet" href="./assets/CSS/footer.css" />
+  <link rel="stylesheet" href="./assets/CSS/media queries/form.css" />
+  <meta name="description"
+    content="Actif Services Nettoyage est une jeune entreprise d'entretien industriel & de bureau. Nous travaillons ensemble afin de vous proposez les meilleurs services possible." />
+  <link rel="icon" href="./médias/logo asn 2.png" />
+</head>
+
+<body>
+  <header id="header">
+    <a href="index.html">
+      <img src="./médias/logo asn 2.png" alt="logo Actif Services Nettoyage" width="138" height="38" class="logo" />
+    </a>
+    <nav>
+      <ul class="nav" id="navMobile">
+        <li>
+          <a href="/form.html">Contrats</a>
+        </li>
+        <li>
+          <a href="/form.html">Prestations</a>
+        </li>
+        <li>
+          <a href="#contact">Contact</a>
+        </li>
+        <li class="no-border">
+          <a href="/form.html">Devis</a>
+        </li>
+      </ul>
+    </nav>
+    <span class="mobile-menu" id="mobileMenu">&#9776;</span>
+  </header>
+  <main>
+    <section class="container hero">
+      <img alt="background hero" id="heroImg" />
+      <h1>Actif Services Nettoyage</h1>
+      <a class="join-us" href="/form.html">
+        <button>Nous rejoindre</button>
       </a>
-      <nav>
-        <ul class="nav" id="navMobile">
-          <li>
-            <a href="/form.html">Contrats</a>
-          </li>
-          <li>
-            <a href="/form.html">Prestations</a>
-          </li>
-          <li>
-            <a href="#contact">Contact</a>
-          </li>
-          <li class="no-border">
-            <a href="/form.html">Devis</a>
-          </li>
-        </ul>
-      </nav>
-      <span class="mobile-menu" id="mobileMenu">&#9776;</span>
-    </header>
-    <main>
-      <section class="container hero">
-        <img alt="background hero" id="heroImg" />
-        <h1>Actif Services Nettoyage</h1>
-        <a class="join-us" href="/form.html">
-          <button>Nous rejoindre</button>
-        </a>
-      </section>
-      <section class="container form movedSection" id="form">
-        <h2>Dites nous en plus !</h2>
-        <form method="post" data-netlify="true">
-          <label for="type">Type de devis</label>
-          <select id="type" name="type">
-            <option value="" disabled selected>Sélectionnez une option</option>
-            <option value="unique" class="type">Prestation unique</option>
-            <option value="contract" class="type">Devis Contractuelle</option>
-          </select>
-          <label for="who">Vous êtes</label>
-          <select name="who" id="who">
-            <option value="" disabled selected>Sélectionnez une option</option>
-            <option value="individual">Un particulier</option>
-            <option value="buisness">Une entreprise</option>
-          </select>
-          <label for="where">Type de locaux</label>
-          <select name="where" id="where">
-            <option value="" disabled selected>Sélectionnez une option</option>
-            <option value="home">Lieu de vie</option>
-            <option value="office">Bureau</option>
-            <option value="industrial">Industriel</option>
-            <option value="both">Bureau et Industriel</option>
-          </select>
-          <label for="size">Surface des locaux en m² (estimation)</label>
-          <input
-            type="number"
-            id="size"
-            name="size"
-            placeholder="Estimez la surface des locaux"
-            min="0"
-            step="1"
-          />
-          <label for="phone">Téléphone</label>
-          <input
-            type="tel"
-            id="phone"
-            name="phone"
-            placeholder="Renseignez votre numéro de téléphone"
-          />
-          <label for="mail">Email</label>
-          <input
-            type="email"
-            id="mail"
-            name="mail"
-            placeholder="Renseignez votre adresse email"
-          />
-          <input type="submit" class="submit" value="Envoyer" />
-        </form>
-      </section>
-    </main>
-    <footer>
-      <div class="footer-container">
-        <a href="index.html" style="height: 40px">
-          <img
-            src="./médias/logo asn 2.png"
-            alt="logo Actif Services Nettoyage"
-            width="145"
-            height="40"
-            class="logo"
-            loading="lazy"
-          />
-        </a>
-        <div class="footer-nav">
-          <nav>
-            <ul>
-              <li>
-                <a href="/form.html">Contrats</a>
-              </li>
-              <li>
-                <a href="/form.html">Prestations</a>
-              </li>
-              <li>
-                <a href="#contact">Contact</a>
-              </li>
-              <li>
-                <a href="/form.html">Devis</a>
-              </li>
-            </ul>
-          </nav>
-          <nav>
-            <ul>
-              <li>
-                <a href="#">Mentions légales</a>
-              </li>
-              <li>
-                <a href="#">Politique de confidentalités</a>
-              </li>
-              <li>
-                <a href="#">CGV</a>
-              </li>
-            </ul>
-          </nav>
-          <div class="contact" id="contact">
-            <a href="#">
-              <img
-                src="./médias/mail.webp"
-                alt="mail icon"
-                width="35"
-                loading="lazy"
-                height="26"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./médias/phone.webp"
-                alt="phone icon"
-                width="30"
-                loading="lazy"
-                height="30"
-              />
-            </a>
-            <a href="#">
-              <img
-                src="./médias/facebook.webp"
-                alt="facebook icon"
-                width="13.5"
-                height="26"
-                loading="lazy"
-              />
-            </a>
-          </div>
+    </section>
+    <section class="container form movedSection" id="form">
+      <h2>Dites nous en plus !</h2>
+      <form method="post" data-netlify="true">
+        <label for="type">Type de devis</label>
+        <select id="type" name="type">
+          <option value="" disabled selected>Sélectionnez une option</option>
+          <option value="unique" class="type">Prestation unique</option>
+          <option value="contract" class="type">Devis Contractuelle</option>
+        </select>
+        <label for="who">Vous êtes</label>
+        <select name="who" id="who">
+          <option value="" disabled selected>Sélectionnez une option</option>
+          <option value="individual">Un particulier</option>
+          <option value="buisness">Une entreprise</option>
+        </select>
+        <label for="where">Type de locaux</label>
+        <select name="where" id="where">
+          <option value="" disabled selected>Sélectionnez une option</option>
+          <option value="home">Lieu de vie</option>
+          <option value="office">Bureau</option>
+          <option value="industrial">Industriel</option>
+          <option value="both">Bureau et Industriel</option>
+        </select>
+        <label for="size">Surface des locaux en m² (estimation)</label>
+        <input type="number" id="size" name="size" placeholder="Estimez la surface des locaux" min="0" step="1" />
+        <label for="phone">Téléphone</label>
+        <input type="tel" id="phone" name="phone" placeholder="Renseignez votre numéro de téléphone" />
+        <label for="mail">Email</label>
+        <input type="email" id="mail" name="mail" placeholder="Renseignez votre adresse email" />
+        <input type="submit" class="submit" value="Envoyer" />
+      </form>
+    </section>
+  </main>
+  <footer>
+    <div class="footer-container">
+      <a href="index.html" style="height: 40px">
+        <img src="./médias/logo asn 2.png" alt="logo Actif Services Nettoyage" width="145" height="40" class="logo"
+          loading="lazy" />
+      </a>
+      <div class="footer-nav">
+        <nav>
+          <ul>
+            <li>
+              <a href="/form.html">Contrats</a>
+            </li>
+            <li>
+              <a href="/form.html">Prestations</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+            <li>
+              <a href="/form.html">Devis</a>
+            </li>
+          </ul>
+        </nav>
+        <nav>
+          <ul>
+            <li>
+              <a href="#">Mentions légales</a>
+            </li>
+            <li>
+              <a href="#">Politique de confidentalités</a>
+            </li>
+            <li>
+              <a href="#">CGV</a>
+            </li>
+          </ul>
+        </nav>
+        <div class="contact" id="contact">
+          <a href="#">
+            <img src="./médias/mail.webp" alt="mail icon" width="35" loading="lazy" height="26" />
+          </a>
+          <a href="#">
+            <img src="./médias/phone.webp" alt="phone icon" width="30" loading="lazy" height="30" />
+          </a>
+          <a href="#">
+            <img src="./médias/facebook.webp" alt="facebook icon" width="13.5" height="26" loading="lazy" />
+          </a>
         </div>
       </div>
-      <div class="legal">
-        <p class="meta" id="meta"></p>
-        <p class="meta">Hebergé par <a href="#">Netlify</a></p>
-      </div>
-    </footer>
-    <script src="./assets/JS/script.js"></script>
-  </body>
+    </div>
+    <div class="legal">
+      <p class="meta" id="meta"></p>
+      <p class="meta">Hebergé par <a href="#">Netlify</a></p>
+    </div>
+  </footer>
+  <script src="./assets/JS/script.js"></script>
+</body>
+
 </html>
