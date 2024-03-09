@@ -145,6 +145,7 @@ carrousel.addEventListener("mouseleave", (e) => {
 
 slides.forEach((slide) => {
   slide.addEventListener("click", (e) => {
+    e.preventDefault();
     boundingRect = slide.getBoundingClientRect();
     const clickX = e.clientX - boundingRect.left;
     console.log(slide.width);

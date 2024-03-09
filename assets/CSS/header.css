@@ -1,3 +1,7 @@
+header *,
+.hero * {
+  color: #fefffe;
+}
 header {
   display: flex;
   height: auto;
@@ -41,8 +45,8 @@ header nav ul {
   top: 0;
   left: 0;
   object-fit: cover;
-  opacity: 0.9;
   z-index: -1;
+  background: rgba(0, 0, 0, 0.6);
 }
 
 .join-us {
@@ -53,17 +57,18 @@ header nav ul {
 }
 
 .join-us button {
-  font-size: 16px;
   width: 100%;
   height: 100%;
   border-radius: 20px;
   background-color: #e62701;
 }
-
-.join-us button:hover {
-  background-color: #0180a8;
+.join-us button p {
+  font-size: 16px;
 }
 
+.join-us button::before {
+  background-color: #0180a8;
+}
 /* ************************************************************ MEDIA QUERIES ************************************************************ */
 
 @media screen and (max-width: 960px) {

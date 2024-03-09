@@ -50,10 +50,26 @@ a {
   transition: 0.3s ease-in;
 }
 
-nav a:hover {
-  text-decoration: underline;
-  text-decoration-thickness: 1px;
-  text-underline-offset: 4px;
+nav a {
+  position: relative;
+}
+
+nav a::after {
+  content: "";
+  position: absolute;
+  bottom: -1px;
+  left: 0;
+  height: 1px;
+  width: 100%;
+  background-color: #fefffe;
+  transition: transform 0.3s ease-in-out;
+  transform: scaleX(0);
+  transform-origin: right;
+}
+
+nav a:hover::after {
+  transform-origin: left;
+  transform: scaleX(1);
 }
 
 p {
@@ -67,19 +83,38 @@ p {
 }
 
 button {
-  font-family: "Montserrat", Arial, sans-serif;
   border-radius: 18px;
   background: #0180a8;
   border: none;
-  color: #fefffe;
-  font-weight: 500;
-  padding: 0;
-  cursor: pointer;
+  position: relative;
 }
 
-button:hover {
-  transition: 0.3s ease-in-out;
-  background: #e62701;
+button::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  border-radius: 36px;
+  background-color: #e62701;
+  width: 100%;
+  height: 100%;
+  z-index: 1;
+  transition: all 0.6s cubic-bezier(0.165, 0.84, 0.44, 1);
+  transform-origin: top center;
+  transform: scale(0);
+}
+button:hover::before {
+  border-radius: 18px;
+  transform: scale(1);
+}
+
+button p {
+  position: relative;
+  color: #fefffe;
+  font-family: "Montserrat", Arial, sans-serif;
+  font-weight: 500;
+  font-size: 14px;
+  z-index: 20;
 }
 
 /* ************************************************************ TRUST ************************************************************ */
@@ -183,6 +218,7 @@ button:hover {
   bottom: 48px;
   right: 6.25%;
   z-index: 100;
+  cursor: pointer;
 }
 
 .circle {
@@ -257,7 +293,7 @@ button:hover {
   height: 3px;
   transform: translate(-0.75px, -0.75px);
   border-radius: 50%;
-  background-color: #fefefe;
+  background-color: #fefffe;
 }
 
 /* ************************************************************ SIMULATION ************************************************************ */
