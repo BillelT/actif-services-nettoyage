@@ -30,19 +30,11 @@ if (screenWidth < 700) {
 //make the header fixed to the top after 3 scrolls from the user
 window.addEventListener("scroll", (e) => {
   if (window.scrollY >= 240) {
-    header.style.position = "fixed";
-    header.style.top = "0";
-    header.style.left = "0";
-    header.style.background = "#fefffe";
-    header.style.paddingBottom = "8px";
-    header.style.paddingTop = "8px";
+    header.classList.add("scrolled");
     navMobile.style.top = "47px";
     movedSection.style.paddingTop = "203px";
   } else if (mobileMenu.innerText !== "X") {
-    header.style.position = "relative";
-    header.style.paddingBottom = "16px";
-    header.style.paddingTop = "16px";
-    navMobile.style.top = "55px";
+    header.classList.remove("scrolled");
     header.style.background = "transparent";
     movedSection.style.paddingTop = "128px";
   }

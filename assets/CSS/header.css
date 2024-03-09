@@ -2,6 +2,7 @@ header *,
 .hero * {
   color: #fefffe;
 }
+
 header {
   display: flex;
   height: auto;
@@ -12,6 +13,20 @@ header {
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
   z-index: 1000;
+}
+
+header.scrolled {
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: #fefffe !important;
+  padding-bottom: 8px;
+  padding-top: 8px;
+  color: #0d1321;
+}
+
+header.scrolled * {
+  color: #0d1321;
 }
 
 header nav {
@@ -67,6 +82,7 @@ header nav ul {
 }
 
 .join-us button::before {
+  border-radius: 20px;
   background-color: #0180a8;
 }
 /* ************************************************************ MEDIA QUERIES ************************************************************ */
@@ -82,6 +98,9 @@ header nav ul {
   }
 
   .join-us button {
+    border-radius: 16px;
+  }
+  .join-us:hover::before {
     border-radius: 16px;
   }
 }

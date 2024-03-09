@@ -46,6 +46,11 @@
 }
 
 @media screen and (max-width: 730px) {
+  .about-text,
+  .learn-more {
+    margin-left: 0;
+  }
+
   .advantage {
     flex-direction: column;
     row-gap: 64px;
@@ -62,11 +67,14 @@
 }
 
 @media screen and (max-width: 590px) {
-  .choice a {
+  .small-button {
     width: 210px;
     height: 38.98px;
   }
-  .choice a button {
+  .small-button button {
+    border-radius: 12px;
+  }
+  button:hover::before {
     border-radius: 12px;
   }
 }
