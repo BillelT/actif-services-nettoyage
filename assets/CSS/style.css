@@ -97,6 +97,25 @@ button:hover {
   position: relative;
   width: 100vw;
   margin-left: -6.25vw;
+  cursor: none;
+}
+
+.cursor {
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 1000;
+  opacity: 0;
+  visibility: hidden;
+  pointer-events: none;
+}
+.cursor.is-visible {
+  opacity: 1;
+  visibility: visible;
+}
+
+.cursor.is-visible .carrousel-arrow.next {
+  transform: rotate(180deg);
 }
 
 .customer {

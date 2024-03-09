@@ -8,7 +8,7 @@ const url = window.location.href;
 const typeOptions = document.querySelectorAll(".type");
 const movedSection = document.querySelector(".movedSection");
 let screenWidth = window.innerWidth;
-let startX, endX;
+let startX, endX, deltaX;
 
 if (!url.includes("form")) {
 } else {
@@ -100,22 +100,19 @@ bullets.forEach((bullet) => {
   });
 });
 
-carrousel.addEventListener("mousedown", (e) => {
-  e.preventDefault();
-  startX = e.clientX;
-});
 carrousel.addEventListener(
   "touchstart",
   (e) => {
     startX = e.touches[0].clientX;
-    console.log("début", startX);
   },
   { passive: true }
 );
 
-function manualNavigation() {
-  const deltaX = endX - startX;
-  if (deltaX <= -120 || deltaX >= 120) {
+function manualNavigation(e) {
+  if (e.type !== "click") {
+    deltaX = endX - startX;
+  }
+  if (deltaX <= -60 || deltaX >= 60) {
     const customerActive = document.querySelector(".active");
     const indexActive = [...customers].indexOf(customerActive);
 
@@ -130,15 +127,39 @@ function manualNavigation() {
     newActive.classList.add("active");
   }
 }
-
-carrousel.addEventListener("mouseup", (e) => {
-  endX = e.clientX;
-  manualNavigation();
+carrousel.addEventListener("mousemove", (e) => {
+  const boundingRect = carrousel.getBoundingClientRect();
+  const cursorX = e.clientX - boundingRect.left;
+  const cursorY = e.clientY - boundingRect.top;
+  cursor.classList.add("is-visible");
+  cursor.style.transform = "translate(" + cursorX + "px," + cursorY + "px)";
+  if (cursorX > slides[0].width / 2) {
+    carrouselArrow.classList.add("next");
+  } else {
+    carrouselArrow.classList.remove("next");
+  }
 });
+carrousel.addEventListener("mouseleave", (e) => {
+  cursor.classList.remove("is-visible");
+});
+
+slides.forEach((slide) => {
+  slide.addEventListener("click", (e) => {
+    boundingRect = slide.getBoundingClientRect();
+    const clickX = e.clientX - boundingRect.left;
+    console.log(slide.width);
+    if (clickX < slide.width / 2) {
+      deltaX = 60;
+    } else {
+      deltaX = -60;
+    }
+    manualNavigation(e);
+  });
+});
+
 carrousel.addEventListener("touchend", (e) => {
   endX = e.changedTouches[0].clientX;
-  console.log("fin", endX);
-  manualNavigation();
+  manualNavigation(e);
 });
 
 // Burger Menu
