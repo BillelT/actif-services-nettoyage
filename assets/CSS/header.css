@@ -13,12 +13,11 @@ header {
   justify-content: space-between;
   transition: all 0.3s ease-in-out;
   z-index: 1000;
+  position: absolute;
 }
 
 header.scrolled {
   position: fixed;
-  top: 0;
-  left: 0;
   background: #fefffe !important;
   padding-bottom: 8px;
   padding-top: 8px;
@@ -56,7 +55,7 @@ header nav ul {
 .hero img {
   position: absolute;
   width: 100%;
-  height: 759px;
+  height: 689px;
   top: 0;
   left: 0;
   object-fit: cover;
@@ -82,7 +81,7 @@ header nav ul {
 }
 
 .join-us button::before {
-  border-radius: 20px;
+  border-radius: 18px;
   background-color: #0180a8;
 }
 /* ************************************************************ MEDIA QUERIES ************************************************************ */
@@ -101,7 +100,7 @@ header nav ul {
     border-radius: 16px;
   }
   .join-us:hover::before {
-    border-radius: 16px;
+    border-radius: 14px;
   }
 }
 

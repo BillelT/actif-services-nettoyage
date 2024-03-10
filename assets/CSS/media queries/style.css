@@ -75,6 +75,6 @@
     border-radius: 12px;
   }
   button:hover::before {
-    border-radius: 12px;
+    border-radius: 10px;
   }
 }

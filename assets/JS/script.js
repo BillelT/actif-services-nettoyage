@@ -6,7 +6,6 @@ const Year = Dates.getFullYear();
 const navLinks = ["Contrats", "Prestations", "Contact", "Devis"];
 const url = window.location.href;
 const typeOptions = document.querySelectorAll(".type");
-const movedSection = document.querySelector(".movedSection");
 let screenWidth = window.innerWidth;
 let startX, endX, deltaX;
 
@@ -29,14 +28,19 @@ if (screenWidth < 700) {
 
 //make the header fixed to the top after 3 scrolls from the user
 window.addEventListener("scroll", (e) => {
+  const scrollTop = window.scrollY;
+  const scale = 20 - (scrollTop * 4) / 100;
+  if (scale <= 1) {
+    heart.style.transform = "scale(1)";
+  } else {
+    heart.style.transform = "scale(" + scale + ")";
+  }
   if (window.scrollY >= 240) {
     header.classList.add("scrolled");
     navMobile.style.top = "47px";
-    movedSection.style.paddingTop = "203px";
   } else if (mobileMenu.innerText !== "X") {
     header.classList.remove("scrolled");
     header.style.background = "transparent";
-    movedSection.style.paddingTop = "128px";
   }
 });
 
