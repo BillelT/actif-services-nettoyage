@@ -21,15 +21,15 @@ if (!url.includes("form")) {
 }
 
 if (screenWidth < 700) {
-  heroImg.src = "./médias/Background-hero-mobile.webp";
+  heroImg.src = "../médias/Background-hero-mobile.webp";
 } else {
-  heroImg.src = "./médias/Background-hero.webp";
+  heroImg.src = "../médias/Background-hero.webp";
 }
 
 //make the header fixed to the top after 3 scrolls from the user
 window.addEventListener("scroll", (e) => {
   const scrollTop = window.scrollY;
-  const scale = 20 - (scrollTop * 4) / 100;
+  const scale = 20 - (scrollTop * 3) / 100;
   if (scale <= 1) {
     heart.style.transform = "scale(1)";
   } else {
