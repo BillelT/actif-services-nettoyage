@@ -40,7 +40,6 @@ window.addEventListener("scroll", (e) => {
     navMobile.style.top = "47px";
   } else if (mobileMenu.innerText !== "X") {
     header.classList.remove("scrolled");
-    header.style.background = "transparent";
   }
 });
 
@@ -164,6 +163,7 @@ document.addEventListener("click", (e) => {
   if (e.target.innerText === "☰") {
     navMobile.classList.toggle("mobile-nav-clicked");
     mobileMenu.innerText = "X";
+    mobileMenu.style.color = "#0d1321";
     header.style.background = "#fefffe";
   } else if (e.target.innerText === "X") {
     navMobile.classList.toggle("mobile-nav-clicked");

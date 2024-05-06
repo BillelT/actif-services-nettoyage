@@ -1,5 +1,5 @@
-header *,
-.hero * {
+header,
+.hero {
   color: #fefffe;
 }
 
@@ -16,9 +16,13 @@ header {
   position: absolute;
 }
 
+header nav a::after {
+  display: none;
+}
+
 header.scrolled {
   position: fixed;
-  background: #fefffe !important;
+  background-color: #fefffe;
   padding-bottom: 8px;
   padding-top: 8px;
   color: #0d1321;
@@ -81,7 +85,7 @@ header nav ul {
 }
 
 .join-us button::before {
-  border-radius: 18px;
+  border-radius: 20px;
   background-color: #0180a8;
 }
 /* ************************************************************ MEDIA QUERIES ************************************************************ */
@@ -99,8 +103,8 @@ header nav ul {
   .join-us button {
     border-radius: 16px;
   }
-  .join-us:hover::before {
-    border-radius: 14px;
+  .join-us button::before {
+    border-radius: 16px;
   }
 }
 
@@ -134,6 +138,7 @@ header nav ul {
     left: 83.6%;
     font-size: 24px;
     transform: translateY(4px);
+    color: #0d1321;
   }
 
   header nav li a {
@@ -169,6 +174,9 @@ header nav ul {
   }
 
   .join-us button {
+    border-radius: 12px;
+  }
+  .join-us button::before {
     border-radius: 12px;
   }
 }
